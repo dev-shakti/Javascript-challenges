@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container{
+   max-width: 550px;
+   margin: 0 auto;
+   padding: 10px;
+}
+
+.main-container img{
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.main-container p{
+    margin: 15px 0;
+    color: #ccc;
+}
+
+.main-container .btn{
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: rgb(26, 137, 131);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.main-container .btn:hover{
+    opacity: 0.8;
+}
+
+.trailer-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.trailer-container.active{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer-container video{
+    max-width: 900px;
+    outline: none;
+    position: relative;
+}
+
+.trailer-container .fa-times{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.trailer-container .fa-times:hover{
+    color: red;
+}
+
+@media(max-width:991px){
+    .trailer-container video{
+        max-width: 90%;
+    }
+}
